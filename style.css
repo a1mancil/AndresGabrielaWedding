@@ -40,7 +40,8 @@ img {
 }
 
 .p1 {
-  font-family: "Brush Script MT", Times, serif;
+   /* make font bold after lunch, use Vue for countdown and to control dom */
+  font-family: 'Tangerine', "Brush Script MT", Times, serif;
   font-size: 430%;
 }
 .p2 {
