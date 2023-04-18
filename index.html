@@ -1,3 +1,41 @@
+<!-- LESSONS: about Vue CDN and 'defer' keyword:
+
+  "During development, Vue provides a number of features to improve the development
+   experience:
+    - Warning for common errors and pitfalls
+    - Props / events validation
+    - Reactivity debugging hooks
+    - Devtools integration
+  However, these features become useless in production. Some of the warning checks 
+  can also incur a small amount of performance overhead. When deploying to 
+  production, we should drop all the unused, development-only code branches for 
+  smaller payload size and better performance."
+  https://vuejs.org/guide/best-practices/production-deployment.html
+
+
+  Different CDN's for Vue:
+
+  For PRD: 
+    > "https://unpkg.com/vue@3/dist/vue.global.prod.js"
+
+  For DEV: (Learning/Prototyping)
+    > "https://unpkg.com/vue@next" 
+    > "https://unpkg.com/vue@3/dist/vue.global.js"
+
+  When you're ready for PRD, use the PRD CDN that ends with '.prod.js'.
+  The CDN I have now ends in '.global.js' which has more warning checks and
+  other things described above.
+
+
+
+  'defer' Keyword:
+  "If the defer attribute is set, it specifies that the script is
+   downloaded in parallel to parsing the page, and executed after 
+   the page has finished parsing"
+   https://www.w3schools.com/tags/att_script_defer.asp
+
+  -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,8 +50,11 @@
   <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Tangerine">
 
-  <!-- javascript -->
-  <script src="app.js"></script>
+  <!-- javascript, Vue CDN (remember to change this to the PRD cdn,
+       see Lessons section above) -->
+  <script src="https://unpkg.com/vue@next" defer></script>
+
+  <script src="app.js" defer></script>
 
   <title> Andres and Gabriela Wedding </title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -27,29 +68,25 @@
     HTML Attribute of "div" tag: "class"
     HTML Property of "class" attribute: "MyWrapper"  
   -->
-  <div class="MyWrapper">
+  <div id="MyWrapper">
 
     <header>
       <div>
-          <img src="flowerLeft.webp" alt="Flower">
+          <img src="flowerLeft.webp" alt="FlowerLeft">
       </div>
 
       <div>
-          <p class="weddingTitle" >Andres & Gabriela</p>
+          <p id="weddingTitle" >Andres & Gabriela</p>
       </div>
 
       <div >
-          <img src="flowerRight.webp" alt="Flower">
+          <img src="flowerRight.webp" alt="FlowerRight">
       </div>
     </header>
 
     <main>
-      <div class="weddingDate">
-        <div> October 28th, 2023 - San Digeo Ca - </div>
-        <div id="demo"></div>
-      </div>
-  
-      <div class="MassAndReceptionInfo">
+      <div id="weddingDate"> October 28th, 2023 - San Digeo Ca - {{daysLeft}} DAYS TO GO!! </div>
+      <div id="MassAndReceptionInfo">
         <h1>Mass</h1>
         <h1>Reception</h1>
       </div>
