@@ -20,29 +20,36 @@ body{
 }
 
 .MyWrapper{
-  max-width: 1550px;
+  max-width: 1540px;
   background: white;
   margin: auto; /* Will center the div, let the browser determine margin */
 }
-
+/* Remember that the percentage in a css property will refer to the
+parent element where the percentage is being used. Remember that margin
+is the distance between two elements and padding is the distance between 
+an elements boarder */
 header{
   display: flex;
   justify-content: space-between;
   padding: 1%; /* Padding Percentage is Based 
                   on the Parent Element’s Width */
   height: 200px;  /*change as the resolution changes */
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 
 img {
   width: 300px;
   height: 200px;
+  opacity: 0.8;
 }
 
 .p1 {
    /* make font bold after lunch, use Vue for countdown and to control dom */
-  font-family: 'Tangerine', "Brush Script MT", Times, serif;
-  font-size: 430%;
+  font-family: 'Tangerine', "Brush Script MT",Georgia ;
+  text-shadow: 4px 4px 4px #aaa;
+  font-size: 450%;
 }
 .p2 {
   font-family:Times, serif;
@@ -54,21 +61,21 @@ img {
 }
 
 /* TODO */
-
-/* 1) Good */
- @media screen and (max-width:1175px)
+/* Get smaller by percentages */
+ @media screen and (max-width: 5%)
  {
+    /* Create a containment context with the 'container-type' property */
     header{
       height: 155px; 
     }
     img {
-      width: 250px;
-      height: 150px;
+      width: 245px;
+      height: 145px;
       /* margin-top: 20px; */
     }
 
     .p1 {
-       font-size: 330%;
+       font-size: 370%;
     }
     .p2 {
       font-size: 180%;
@@ -77,29 +84,6 @@ img {
       font-size: 80%;
     }
  }
-/* 2) good
- @media screen and (max-width:1025px)
- {
-    header{
-       height: 160px; 
-    }
-    img {
-      width: 230px;
-      height: 130px;
-    }
-
-    .p1 {
-       font-size: 330%;
-    }
-    .p2 {
-      font-size: 200%;
-    }
-    .p3 {
-      font-size: 75%;
-    }
- } */
-
-/* 3) Good */
  @media screen and (max-width:950px)
  {
     header{
@@ -119,29 +103,6 @@ img {
       font-size: 70%;
     }
  }
-/* 4) Good */
- /* @media screen and (max-width:844px)
- {
-
-    header{
-      height: 130px;
-    }
-    img {
-      width: 200px;
-      height: 100px;
-    }
-    .p1 {
-       font-size: 280%;
-    }
-    .p2 {
-      font-size: 170%;
-    }
-    .p3 {
-      font-size: 68%;
-    }
- } */
-
-/* 5) Good */
  @media screen and (max-width:805px)
  {
     header{
@@ -161,28 +122,6 @@ img {
       font-size: 55%;
     }
  }
-
- /* 6) Good */
- /* @media screen and (max-width:725px)
- {
-    header{
-      height: 100px;
-    }
-    img {
-      width: 170px;
-      height: 75px;
-    }
-    .p1 {
-       font-size: 210%;
-    }
-    .p2 {
-      font-size: 140%;
-    }
-    .p3 {
-      font-size: 60%;
-    }
- } */
- /* 7) Good */
  @media screen and (max-width:660px)
  {
     header{
@@ -202,7 +141,6 @@ img {
       font-size: 45%;
     }
  }
- /* 8) Good */
   @media screen and (max-width:590px)
  {
     header{
@@ -222,29 +160,6 @@ img {
       font-size: 40%;
     }
  } 
-
- /* 9) Good */
- /* @media screen and (max-width:492px)
- {
-    header{
-      height: 70px;
-    }
-    img {
-      width: 90px;
-      height: 45px;
-    }
-    .p1 {
-       font-size: 150%;
-    }
-    .p2 {
-      font-size: 90%;
-    }
-    .p3 {
-      font-size: 40%;
-    }
- } */
-
-  /* 10) Good */
   @media screen and (max-width: 533px)
   {
      header{
@@ -265,7 +180,6 @@ img {
      }
   }
 
-    /* 11) Good */
     @media screen and (max-width: 475px)
     {
        header{
@@ -285,19 +199,17 @@ img {
          font-size: 25%;
        }
     }
-
-    /* 12) Good */
     @media screen and (max-width: 395px)
     {
        header{
          height: 45px;
        }
        img {
-         width: 90px;
-         height: 40px;
+         width: 95px;
+         height: 45px;
        }
        .p1 {
-          font-size: 92%;
+          font-size: 110%;
        }
        .p2 {
          font-size: 65%;

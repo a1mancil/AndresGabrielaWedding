@@ -16,4 +16,4 @@ var x = setInterval(function() {
     clearInterval(x);
     document.getElementById("demo").innerHTML = "WE ARE NOW MARRIED";
   }
-}, 10000);
+}, 1000);
