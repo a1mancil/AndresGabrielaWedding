@@ -10,7 +10,7 @@ var x = setInterval(function() {
 
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
 
-  document.getElementById("demo").innerHTML = days + " DAYS TO GO!"
+  document.getElementById("demo").innerHTML =days + " DAYS TO GO!"
 
   if (distance < 0) {
     clearInterval(x);

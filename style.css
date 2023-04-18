@@ -38,6 +38,9 @@ header{
   margin-right: 5%;
   animation: fadeIn 3s;
 }
+main{
+  animation: fadeIn 10s;
+}
 footer{
   animation: fadeIn 3s;
   display: flex;
@@ -64,11 +67,11 @@ img {
 }
 .MassAndReceptionInfo {
   font-family:Times, serif;
-  /* font-size: 270%; */
 }
 .weddingDate {
   font-family:Times, serif;
-  /* font-size: 100%; */
+  display: flex;
+  justify-content: center;
 }
 
 /* TODO */
