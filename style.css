@@ -36,6 +36,17 @@ header{
   height: 200px;  /*change as the resolution changes */
   margin-left: 5%;
   margin-right: 5%;
+  animation: fadeIn 3s;
+}
+footer{
+  animation: fadeIn 3s;
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 
@@ -45,19 +56,19 @@ img {
   opacity: 0.8;
 }
 
-.p1 {
+.weddingTitle {
    /* make font bold after lunch, use Vue for countdown and to control dom */
   font-family: 'Tangerine', "Brush Script MT",Georgia ;
   text-shadow: 4px 4px 4px #aaa;
   font-size: 450%;
 }
-.p2 {
+.MassAndReceptionInfo {
   font-family:Times, serif;
-  font-size: 270%;
+  /* font-size: 270%; */
 }
-.p3 {
+.weddingDate {
   font-family:Times, serif;
-  font-size: 100%;
+  /* font-size: 100%; */
 }
 
 /* TODO */
@@ -74,13 +85,13 @@ img {
       /* margin-top: 20px; */
     }
 
-    .p1 {
+    .weddingTitle {
        font-size: 370%;
     }
-    .p2 {
+    .MassAndReceptionInfo {
       font-size: 180%;
     }
-    .p3 {
+    .weddingDate {
       font-size: 80%;
     }
  }
@@ -93,13 +104,13 @@ img {
       width: 220px;
       height: 120px;
     }
-    .p1 {
+    .weddingTitle {
        font-size: 265%;
     }
-    .p2 {
+    .MassAndReceptionInfo {
       font-size: 150%;
     }
-    .p3 {
+    .weddingDate {
       font-size: 70%;
     }
  }
@@ -112,13 +123,13 @@ img {
       width: 190px;
       height: 90px;
     }
-    .p1 {
+    .weddingTitle {
        font-size: 200%;
     }
-    .p2 {
+    .MassAndReceptionInfo {
       font-size: 120%;
     }
-    .p3 {
+    .weddingDate {
       font-size: 55%;
     }
  }
@@ -131,13 +142,13 @@ img {
       width: 170px;
       height: 80px;
     }
-    .p1 {
+    .weddingTitle {
        font-size: 180%;
     }
-    .p2 {
+    .MassAndReceptionInfo {
       font-size: 100%;
     }
-    .p3 {
+    .weddingDate {
       font-size: 45%;
     }
  }
@@ -150,13 +161,13 @@ img {
       width: 160px;
       height: 70px;
     }
-    .p1 {
+    .weddingTitle {
        font-size: 150%;
     }
-    .p2 {
+    .MassAndReceptionInfo {
       font-size: 90%;
     }
-    .p3 {
+    .weddingDate {
       font-size: 40%;
     }
  } 
@@ -169,13 +180,13 @@ img {
        width: 140px;
        height: 60px;
      }
-     .p1 {
+     .weddingTitle {
         font-size: 135%;
      }
-     .p2 {
+     .MassAndReceptionInfo {
        font-size: 80%;
      }
-     .p3 {
+     .weddingDate {
        font-size: 35%;
      }
   }
@@ -189,13 +200,13 @@ img {
          width: 115px;
          height: 50px;
        }
-       .p1 {
+       .weddingTitle {
           font-size: 115%;
        }
-       .p2 {
+       .MassAndReceptionInfo {
          font-size: 80%;
        }
-       .p3 {
+       .weddingDate {
          font-size: 25%;
        }
     }
@@ -208,13 +219,13 @@ img {
          width: 95px;
          height: 45px;
        }
-       .p1 {
+       .weddingTitle {
           font-size: 110%;
        }
-       .p2 {
+       .MassAndReceptionInfo {
          font-size: 65%;
        }
-       .p3 {
+       .weddingDate {
          font-size: 10%;
        }
     }
