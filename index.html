@@ -1,4 +1,11 @@
-<!-- LESSONS: about Vue CDN and 'defer' keyword:
+<!-- LESSONS: 
+  
+  Cookies: bc I am making a request when I get the Vue CDN from unpukgcom
+   (from https://unpkg.com/vue@next) they are giving me a cookie. I specified
+   that the cookie have the secure flag enabled and the SameSite = Strict.
+   (video about it https://www.youtube.com/watch?v=VtJcd5JXjio&t=2s)
+  
+  about Vue CDN and 'defer' keyword:
 
   "During development, Vue provides a number of features to improve the development
    experience:
@@ -53,7 +60,6 @@
   <!-- javascript, Vue CDN (remember to change this to the PRD cdn,
        see Lessons section above) -->
   <script src="https://unpkg.com/vue@next" defer></script>
-
   <script src="app.js" defer></script>
 
   <title> Andres and Gabriela Wedding </title>
@@ -85,7 +91,7 @@
     </header>
 
     <main>
-      <div id="weddingDate"> October 28th, 2023 - San Digeo Ca - {{daysLeft}} DAYS TO GO!! </div>
+      <div id="weddingDate"> October 28th, 2023 - San Diego, California - {{countDownMessage}} </div>
       <div id="MassAndReceptionInfo">
         <h1>Mass</h1>
         <h1>Reception</h1>
