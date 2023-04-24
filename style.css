@@ -38,6 +38,7 @@ header{
   margin-right: 7%;
   animation: fadeIn 3s;
 }
+
 main{
   animation: fadeIn 5s;
 }
@@ -48,40 +49,131 @@ footer{
 }
 
 @keyframes fadeIn {
-  0% { opacity: 0; }
+  0% { opacity: 0;  }
   100% { opacity: 1; }
 }
 
 img {
-  width: 290px;
+  width: 280px;
   height: 190px;
   opacity: 0.8;
 }
 
 #weddingTitle {
    /* make font bold after lunch, use Vue for countdown and to control dom */
-  font-family: 'Tangerine', "Brush Script MT",Georgia ;
+  font-family: Tangerine, 'Tangerine';
   text-shadow: 4px 4px 4px #aaa;
   font-size: 500%;
-  margin-top: 15% ;
+  margin-top: 15%;
 }
+/* Back up in case remote server cant fetch font from Google */
+@font-face {
+  font-family: Tangerine;
+  src: url('Tangerine-Regular.ttf');
+  font-display: swap;
+}
+
 #MassAndReceptionInfo {
   font-family:Times, serif;
+  font-size: large;
 }
 #weddingDate {
   font-family:Times, serif;
+  font-size: large;
   display: flex;
   justify-content: center;
 }
 
 /* TODO */
-/* Make dev version*/
- /* @media screen and (max-width: 1300px)
+/* 10% smaller */
+ @media screen and (max-width: 1300px)
  {
-  
-    
- } */
+  header{
+    height: 180px;  /*change as the resolution changes */
+  }
+  img {
+    width: 252px;
+    height: 171px;
+  }
+  #weddingTitle {
+    font-size: 450%;
+  }
+ }
+
+ /* 20% smaller */
+ @media screen and (max-width: 1155px)
+ {
+  header{
+    height: 160px;  /*change as the resolution changes */
+  }
+  img {
+    width: 224px;
+    height: 152px;
+  }
+  #weddingTitle {
+    font-size: 400%;
+  }
+ }
+
+  /* 30% smaller */
+  @media screen and (max-width: 1045px)
+  {
+    header{
+      height: 140px;  /*change as the resolution changes */
+    }
+    img {
+      width: 196px;
+      height: 133px;
+    }
+    #weddingTitle {
+      font-size: 350%;
+    }  
+
+    #weddingDate{
+      font-size: medium;
+    }
+    #MassAndReceptionInfo{
+      font-size: medium;
+    }
+  }
+
+  /* Mobile Device -- add a fade out and collapse div
+     that holds image. Have a fade out effect, then
+     remove space images need in the layout. Add 
+     burger menu.
+     
+     Learned about 'transition' css property: 
+     https://developer.mozilla.org/en-US/docs/Web/CSS/transition
+     
+     transition: property name|duration|easing function|delay
+     */
+     
+  /* Fade out images. Style changes when scree gets smaller*/
+  @media screen and (max-width: 970px)
+  {
+   img {
+    opacity: 0;
+    transition: opacity .5s;
+   }
+  }
+  @media screen and (max-width: 890px)
+  {
+   img {
+    display: none;
+   }
+  }
+
+  /* Fade in images again. Style changes when screen gets bigger*/
+  @media screen and (min-width: 970px)
+  {
+    img {
+    opacity: 1;
+    transition: opacity .5s;
+    }
+  }
+
 
     /* IMPORTANT: */
     /* Minimum screen size is 320px */
 
+  
