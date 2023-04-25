@@ -18,6 +18,10 @@ body{
   background-color: rgb(220,220,220);
   margin: auto; /*let the browser determine margin */
 }
+main{
+  margin-left: 7%;
+  margin-right: 7%;
+}
 
 #MyWrapper{
   max-width: 1540px;
