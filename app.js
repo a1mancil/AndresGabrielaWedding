@@ -35,6 +35,7 @@ const app = Vue.createApp({
       return this.daysLeft + this.beforeWeddingMessage;
     }
   },
+  // will reload everytime the page refreshes
   watch:{
     // below is an example of an eager watcher:
     daysLeft:{
@@ -57,7 +58,7 @@ const app = Vue.createApp({
   }
 });
 
-app.mount('#weddingDate');
+app.mount('#WeddingDateHeader');
 
 
 
