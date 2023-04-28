@@ -24,9 +24,47 @@ const app = Vue.createApp({
       // 'daysLeft' will update at the start of every refresh
       daysLeft: 0,
       beforeWeddingMessage: " DAYS TO GO!!",
-      afterWeddingMessage: "WE ARE STOKED CAUSE WE ARE YOKED!!"
+      afterWeddingMessage: "WE ARE STOKED CAUSE WE ARE YOKED!!",
+      mainHTMLElement: `<div id="MassAndReceptionInfo">
+                          <h1>Mass</h1> <b></b>
+                          <!-- "&emsp" is four space gap -->
+                          <p> &emsp; <a href="https://www.olmcsandiego.org/" target="_blank" ><b> Our Lady of Mount Carmel: </b></a> </p>
+                          <p> &emsp; 13541 Stoney Creek Rd, San Diego, CA 92129</p>
+                          <h1>Reception</h1>
+                          <p> &emsp; <a href="https://www.blvdhall.com/" target="_blank"><b> Boulevard Hall: </b></a> </p>
+                          <p> &emsp; 4265 El Cajon Blvd, San Diego, CA 92105 </p>
+                        </div>`
     };
   },
+  methods:{
+    htmlHome(){
+      this.mainHTMLElement = `<div id="MassAndReceptionInfo">
+      <h1>Mass</h1> <b></b>
+      <!-- "&emsp" is four space gap -->
+      <p> &emsp; <a href="https://www.olmcsandiego.org/" target="_blank" ><b> Our Lady of Mount Carmel: </b></a> </p>
+      <p> &emsp; 13541 Stoney Creek Rd, San Diego, CA 92129</p>
+      <h1>Reception</h1>
+      <p> &emsp; <a href="https://www.blvdhall.com/" target="_blank"><b> Boulevard Hall: </b></a> </p>
+      <p> &emsp; 4265 El Cajon Blvd, San Diego, CA 92105 </p>
+    </div>`;
+    },
+    htmlHotels(){
+      this.mainHTMLElement = `<div id="MassAndReceptionInfo">
+        <h1>Hotels/Hoteles: </h1> <b></b>
+        <!-- "&emsp" is four space gap -->
+        <p> &emsp; poway one</p>
+       </div>`
+    },
+    htmlRegistry(){
+      this.mainHTMLElement = `
+        <h3> Your presence is our greatest gift but here is our venmo</h3> `
+    },
+    htmlRSVP(){
+      this.mainHTMLElement = `
+        <h3> RSVP app TODO</h3> `
+    }
+  },
+
   computed:{
     countDownMessage(){
       if(this.daysLeft == 0){
@@ -57,8 +95,9 @@ const app = Vue.createApp({
     }
   }
 });
+app.mount('#MyWrapper');
 
-app.mount('#WeddingDateHeader');
+
 
 
 

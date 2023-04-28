@@ -14,7 +14,7 @@
     - Reactivity debugging hooks
     - Devtools integration
   However, these features become useless in production. Some of the warning checks 
-  can also incur a small amount of performance overhead. When deploying to 
+  can also incur a  small amount of performance overhead. When deploying to 
   production, we should drop all the unused, development-only code branches for 
   smaller payload size and better performance."
   https://vuejs.org/guide/best-practices/production-deployment.html
@@ -97,26 +97,20 @@
       </div>
 
       <div id="WeddingDateHeader"> October 28th, 2023 - San Diego, California - {{countDownMessage}} </div>
+
       <nav>
         <ul id="navBar">
-          <li> <a href="">Home</a> </li>
-          <li> <a href="">Accomodations | Hoteles</a> </li>
-          <li> <a href="">Registry | Sugerencia de Regalos</a> </li>
-          <li> <a href="">RSVP</a> </li>
+          <li> <a v-on:click="htmlHome()">Home</a> </li>
+          <li> <a v-on:click="htmlHotels()">Accomodations | Hoteles</a> </li>
+          <li> <a v-on:click="htmlRegistry()">Registry | Sugerencia de Regalos</a> </li>
+          <li> <a v-on:click="htmlRSVP()">RSVP</a> </li>
         </ul>
       </nav>
+
     </header>
-      
-    <main>
-      <div id="MassAndReceptionInfo">
-        <h1>Mass</h1> <b></b>
-        <!-- "&emsp" is four space gap -->
-        <p> &emsp; <a href="https://www.olmcsandiego.org/" target="_blank" ><b> Our Lady of Mount Carmel: </b></a> </p>
-        <p> &emsp; 13541 Stoney Creek Rd, San Diego, CA 92129</p>
-        <h1>Reception</h1>
-        <p> &emsp; <a href="https://www.blvdhall.com/" target="_blank"><b> Boulevard Hall: </b></a> </p>
-        <p> &emsp; 4265 El Cajon Blvd, San Diego, CA 92105 </p>
-      </div>
+
+    <main v-html="mainHTMLElement">
+
     </main>
 
 
